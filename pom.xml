@@ -10,6 +10,10 @@
     <modules>
         <module>microservicecloud-api</module>
         <module>microservicecloud-provider-dept-8001</module>
+        <module>microservicecloud-consumer-dept-80</module>
+        <module>microservicecloud-eureka-7001</module>
+        <module>microservicecloud-eureka-7002</module>
+        <module>microservicecloud-eureka-7003</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -70,4 +74,27 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <finalName>microservicecloud</finalName>
+        <resources>
+            <resource>
+                <!--配置文件路径-->
+                <directory>src/main/resources</directory>
+                <!--过滤开启-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <!--以$开头和结尾的配置文件我就可以读取-->
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
