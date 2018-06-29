@@ -6,7 +6,11 @@ import com.netflix.loadbalancer.ILoadBalancer;
 import com.netflix.loadbalancer.Server;
 
 import java.util.List;
-
+/**
+ *这个自定义的路由策略类不能在标注@ComponetScan的类同包或其包下，因为主启动类DeptConsumer80_App里面有这个注解，所以要在它不同级别去建一个包
+ *@author：赵亮
+ *@date：2018-06-27 14:50
+*/
 public class RandomRule_ZY extends AbstractLoadBalancerRule
 {
 

@@ -3,3 +3,5 @@
 api是公用的的类
 80那个项目是消费者，同时他那里用到了Ribbon实现客户端的负载均衡
 启动顺序是：7001 7002 7003 8001 8002 8003 80
+microservicecloudconsumerhystrixdashboard服务监控8822
+带熔断和降服处理 microservicecloudconsumerdeptfeign 配合api里面接口的配置实现

@@ -13,9 +13,8 @@ import java.util.List;
  * 
  * @Description: 修改microservicecloud-api工程，根据已经有的DeptClientService接口
 
-新建
-
-一个实现了FallbackFactory接口的类DeptClientServiceFallbackFactory
+新建一个实现了FallbackFactory接口的类DeptClientServiceFallbackFactory
+面相Feign的服务接口
  * @author zzyy
  * @date 2018年4月21日
  */
@@ -24,11 +23,11 @@ import java.util.List;
 public interface DeptClientService
 {
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
-	public Dept get(@PathVariable("id") long id);
+	Dept get(@PathVariable("id") long id);
 
 	@RequestMapping(value = "/dept/list", method = RequestMethod.GET)
-	public List<Dept> list();
+	List<Dept> list();
 
 	@RequestMapping(value = "/dept/add", method = RequestMethod.POST)
-	public boolean add(Dept dept);
+	boolean add(Dept dept);
 }
