@@ -13,3 +13,4 @@ public class Config_3344_StartSpringCloudApp
 		SpringApplication.run(Config_3344_StartSpringCloudApp.class, args);
 	}
 }
+//http://config-3344.com:3344/application-dev.yml
